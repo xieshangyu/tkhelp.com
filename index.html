@@ -1,4 +1,4 @@
-、<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -139,12 +139,46 @@
             border-top: 1px solid #e6e6e6;
             margin-top: 30px;
         }
+        /* Media queries for responsiveness */
         @media (min-width: 768px) {
             .flex-container {
                 grid-template-columns: 1fr 1fr;
             }
+            h1 {
+                font-size: 42px;
+            }
+            .button {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+        @media (max-width: 480px) {
+            .icon-top-left {
+                width: 30px;
+                height: 30px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .icon-center {
+                width: 60px;
+                height: 60px;
+            }
+            .button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
         }
     </style>
+    <script>
+        // 调整后的 scrollToRequirements 函数
+        function scrollToRequirements() {
+            const requirementsSection = document.getElementById('requirements');
+            if (requirementsSection) {
+                requirementsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -185,13 +219,11 @@
             <section id="requirements">
                 <h2>All Requirements:</h2>
                 <p>Partner will need at least:</p>
-                <ul>
-                    <li>1. U.S. citizen's <span class="highlight">passport</span> or <span class="highlight">driver’s license</span></li>
-                    <li>2. <span class="highlight">Permanent</span> residential address</li>
-                    <li>3. Social Security Number (<span class="highlight">SSN</span>)</li>
-                    <li>4. <span class="highlight">Cooperation</span> in the process </li>
-                    <li>5. If the requirements are <span class="highlight">not</span> met, you can still <span class="highlight">earn income</span> by <span class="highlight">referring</span> others.</li>
-                </ul>
+                <p>1. U.S. citizen's <span class="highlight">passport</span> or <span class="highlight">driver’s license</span></p>
+                <p>2. <span class="highlight">Permanent</span> residential address</p>
+                <p>3. Social Security Number (<span class="highlight">SSN</span>)</p>
+                <p>4. <span class="highlight">Cooperation</span> in the process</p>
+                <p>5. If the requirements are <span class="highlight">not</span> met, you can still <span class="highlight">earn income</span> by <span class="highlight">referring</span> others.</p>
                 <br>
                 <p style="font-size: 18px; font-weight: bold;">We will assist you with everything, don't worry!</p>
             </section>
